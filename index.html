@@ -80,5 +80,27 @@
     <footer>
         <p>&copy; 2024 LORREY. All rights reserved.</p>
     </footer>
+<p>&copy; 2024 LORREY. All rights reserved.</p>
+        <p id="current-time"></p>
+
+        <script>
+            function getCurrentTime() {
+                const now = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+                return now.toLocaleDateString('en-US', options);
+            }
+
+            function updateCurrentTime() {
+                const currentTimeElement = document.getElementById('current-time');
+                if (currentTimeElement) {
+                    currentTimeElement.textContent = 'Current time: ' + getCurrentTime();
+                }
+            }
+
+            updateCurrentTime();
+
+            setInterval(updateCurrentTime, 1000);
+        </script>
+    </footer>
 </body>
 </html>
