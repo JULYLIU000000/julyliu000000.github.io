@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIUYU的个人网页</title>
+    <title>LIUYU's Personal Website</title>
     <style>
         body {
-            background-color: #0077cc; /* 海蓝色背景 */
-            color: #ffffff; /* 白色字体 */
+            background-color: #0077cc; /* Ocean Blue background */
+            color: #ffffff; /* White text */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -24,40 +24,12 @@
             padding: 50px;
         }
 
-        #wave-container {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 20%; /* 调整海浪宽度 */
-            height: 100%;
-            overflow: hidden;
-        }
-
-        #wave {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            background: url('图片/OIP.jpg') repeat-y; /* 从上到下播放 */
-            animation: wave-animation 10s infinite linear;
-        }
-
-        @keyframes wave-animation {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(100%);
-            }
-        }
-
         #footer {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #333; /* 底部区域背景颜色 */
+            background-color: #333; /* Footer background color */
             padding: 10px;
             text-align: center;
         }
@@ -66,20 +38,31 @@
 <body>
 
     <header>
-        <h1>欢迎来到LIUYU的个人网页</h1>
+        <h1>Welcome to LIUYU's Personal Website</h1>
     </header>
 
     <section>
-        <p>你好，我是LIUYU。这是我的个人网页，让我们一起探索吧！</p>
+        <p>Hello, I'm LIUYU. This is my personal website. Let's explore together!</p>
     </section>
 
-    <div id="wave-container">
-        <div id="wave"></div>
+    <div id="footer">
+        <p>Current Time: <span id="current-time"></span></p>
     </div>
 
-    <div id="footer">
-        <p>当前时间：<span id="current-time"></span></p>
-    </div>
+    <section>
+        <h2>About Me</h2>
+        <p>I am passionate about [Your interests]. Explore my journey and experiences.</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <p>Discover the exciting projects I've worked on. Innovation and creativity drive me.</p>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Connect with me! Reach out through [Your preferred contact method]. Let's stay in touch.</p>
+    </section>
 
     <script>
         function updateCurrentTime() {
@@ -91,7 +74,7 @@
             document.getElementById('current-time').innerText = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
         }
 
-        // 更新时间
+        // Update time
         setInterval(updateCurrentTime, 1000);
     </script>
 
