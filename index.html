@@ -25,10 +25,13 @@
         }
 
         #wave-container {
-            position: relative;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 20%; /* 调整海浪宽度 */
+            height: 100%;
             overflow: hidden;
-            width: 100%;
-            height: 200px; /* 调整海浪图片高度 */
         }
 
         #wave {
@@ -36,17 +39,27 @@
             bottom: 0;
             width: 100%;
             height: 100%;
-            background: url('图片/OIP.jpg') repeat-x; /* 替换为你的海浪图片路径 */
+            background: url('图片/OIP.jpg') repeat-y; /* 从上到下播放 */
             animation: wave-animation 10s infinite linear;
         }
 
         @keyframes wave-animation {
             0% {
-                transform: translateX(0);
+                transform: translateY(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateY(100%);
             }
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333; /* 底部区域背景颜色 */
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
@@ -63,6 +76,24 @@
     <div id="wave-container">
         <div id="wave"></div>
     </div>
+
+    <div id="footer">
+        <p>当前时间：<span id="current-time"></span></p>
+    </div>
+
+    <script>
+        function updateCurrentTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            document.getElementById('current-time').innerText = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+        }
+
+        // 更新时间
+        setInterval(updateCurrentTime, 1000);
+    </script>
 
 </body>
 </html>
