@@ -3,80 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIUYU's Personal Website</title>
-    <style>
-        body {
-            background-color: #0077cc; /* Ocean Blue background */
-            color: #ffffff; /* White text */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px;
-        }
-
-        section {
-            text-align: center;
-            padding: 50px;
-        }
-
-        #footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333; /* Footer background color */
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+    <title>LORREY's Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Welcome to LIUYU's Personal Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section>
-        <p>Hello, I'm LIUYU. This is my personal website. Let's explore together!</p>
+    <section id="about">
+        <div class="container">
+            <h1>LORREY</h1>
+            <p>Your introduction and professional information, etc.</p>
+        </div>
     </section>
 
-    <div id="footer">
-        <p>Current Time: <span id="current-time"></span></p>
-    </div>
-
-    <section>
-        <h2>About Me</h2>
-        <p>I am passionate about [Your interests]. Explore my journey and experiences.</p>
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <!-- Add your project information and images here -->
+        </div>
     </section>
 
-    <section>
-        <h2>Projects</h2>
-        <p>Discover the exciting projects I've worked on. Innovation and creativity drive me.</p>
+    <section id="blog">
+        <div class="container">
+            <h2>Blog</h2>
+            <!-- Add your blog post list and content here -->
+        </div>
     </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Connect with me! Reach out through [Your preferred contact method]. Let's stay in touch.</p>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <!-- Add a contact form or other contact information here -->
+        </div>
     </section>
 
-    <script>
-        function updateCurrentTime() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
-
-            document.getElementById('current-time').innerText = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-        }
-
-        // Update time
-        setInterval(updateCurrentTime, 1000);
-    </script>
+    <footer>
+        <p>&copy; 2024 LORREY. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
