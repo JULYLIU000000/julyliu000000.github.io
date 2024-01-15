@@ -3,115 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIUYU - Personal Website</title>
+    <title>LIUYU的个人网页</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            background-color: #0077cc; /* 海蓝色背景 */
+            color: #ffffff; /* 白色字体 */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #4a90e2;
-            background-image: linear-gradient(to bottom, #4a90e2, #fff);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* 设置最小高度，确保footer位于最下方 */
-        }
-
-        body::before,
-        body::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 150px;
-            background-image: url('图片/OIP.jpg');
-            background-repeat: repeat-x;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        body::before {
-            animation: wave-animation 20s infinite linear;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-
-        body::after {
-            animation: wave-animation-reverse 20s infinite linear;
-            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-        }
-
-        @keyframes wave-animation {
-            to {
-                transform: translateX(-100%);
-            }
-        }
-
-        @keyframes wave-animation-reverse {
-            to {
-                transform: translateX(100%);
-            }
         }
 
         header {
-            background-color: #4a90e2;
-            color: #fff;
             text-align: center;
-            padding: 1em;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #4a90e2;
-            padding: 0.5em;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1em;
-            padding: 0.5em;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #fff;
+            padding: 50px;
         }
 
         section {
-            padding: 2em;
-        }
-
-        footer {
-            background-color: #4a90e2;
-            color: #fff;
             text-align: center;
-            padding: 1em;
-            margin-top: auto; /* 设置margin-top为auto，将footer推到最底部 */
+            padding: 50px;
         }
 
-        p {
-            margin: 0;
+        #wave-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 200px; /* 调整海浪图片高度 */
         }
 
-        #current-time {
+        #wave {
             position: absolute;
             bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background: url('图片/OIP.jpg') repeat-x; /* 替换为你的海浪图片路径 */
+            animation: wave-animation 10s infinite linear;
+        }
+
+        @keyframes wave-animation {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
 <body>
-    <!-- 页面内容保持不变 -->
 
-    <footer>
-        <p>&copy; 2024 LORREY. All rights reserved.</p>
-        <p id="current-time"></p>
-    </footer>
+    <header>
+        <h1>欢迎来到LIUYU的个人网页</h1>
+    </header>
 
-    <script>
-        // JavaScript代码保持不变
-    </script>
+    <section>
+        <p>你好，我是LIUYU。这是我的个人网页，让我们一起探索吧！</p>
+    </section>
+
+    <div id="wave-container">
+        <div id="wave"></div>
+    </div>
+
 </body>
 </html>
