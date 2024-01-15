@@ -84,6 +84,18 @@
             color: #fff;
             text-align: center;
             padding: 1em;
+            position: relative; /* 添加相对定位 */
+        }
+
+        p {
+            margin: 0; /* 清除默认的段落边距 */
+        }
+
+        #current-time {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* 居中 */
         }
     </style>
 </head>
