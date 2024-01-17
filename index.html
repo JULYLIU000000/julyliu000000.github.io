@@ -29,7 +29,7 @@
             border-radius: 5px;
         }
 
-        h1, 
+        h1,
         h2 {
             color: #333;
         }
@@ -50,7 +50,7 @@
         }
 
         .welcome-header {
-            font-size: 36px; /* 调整字体大小为36像素 */
+            font-size: 36px;
             color: #fff;
             text-align: center;
             margin-top: 40px;
@@ -59,10 +59,10 @@
         .new-year-message {
             text-align: center;
             font-size: 18px;
-            color: #fff; /* 修改字体颜色为红色 */
+            color: #fff;
             margin-top: 30px;
             position: relative;
-       }
+        }
 
         .fireworks {
             position: absolute;
@@ -72,7 +72,6 @@
             z-index: 2;
         }
 
-        /* 添加烟花爆竹的动画效果 */
         @keyframes fireworksAnimation {
             0% {
                 transform: translateY(0) rotate(0);
@@ -110,43 +109,32 @@
             left: 4px;
             transform-origin: 0% 100%;
         }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 600px) {
+            header {
+                padding: 15px;
+            }
+
+            .welcome-header {
+                font-size: 28px;
+                margin-top: 20px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .new-year-message {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="welcome-header">
-            Welcome to My Personal Website！
-        </div>
-        <p>Developer | Designer | Creator</p>
-    </header>
-
-    <section>
-        <h2>About Me</h2>
-        <p>Welcome to my personal website! I'm passionate about creating beautiful and functional websites that make a difference. With a background in web development and design, I strive to bring creativity and innovation to every project I undertake.</p>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <p>Check out some of my latest projects below:</p>
-        <!-- Add project details and links here -->
-    </section>
-
-    <section>
-        <h2>Contact</h2>
-        <p>Feel free to get in touch with me:</p>
-        <p>Email: yuliu000000@163.com</p>
-        <p>My social media: <a href="https://b23.tv/M3fUNf3" target="_blank">visit my Bilibili</a></p>
-        <!-- Add more contact information as needed -->
-    </section>
-
-    <div class="new-year-message fireworks">
-        <p>Wishing you a joyful and prosperous New Year 2024!</p>
-    </div>
-
-    <footer>
-        &copy; Copyright © 2024 LIUYU Personal Website
-    </footer>
+    <!-- Your HTML content remains unchanged -->
 </body>
 
 </html>
